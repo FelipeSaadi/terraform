@@ -121,7 +121,7 @@ resource "aws_instance" "example" {
 }
 ```
 
-PS: se sua região for diferente da apresentada, altere-a no código acima
+PS: Se sua região for diferente da apresentada, altere-a no código acima
 
 2 - Rode o comando para preparar o Terraform
 
