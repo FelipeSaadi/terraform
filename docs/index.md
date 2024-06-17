@@ -26,7 +26,7 @@ Expand-Archive -Path terraform.zip -DestinationPath C:\terraform
 [System.Environment]::SetEnvironmentVariable('PATH', $env:PATH + ';C:\terraform', [System.EnvironmentVariableTarget]::Machine)
 ```
 
-6. Verificar se o terraform CLI foi instalado corretamente
+6. Rode o comando em um novo terminal para verificar se o terraform CLI foi instalado corretamente
 
 ```
 terraform -v
@@ -36,9 +36,34 @@ terraform -v
 
 ### Instalando AWS CLI
 
+1. Abra o powershell como admin
+
+2. Rode o comando para baixar o instalador do AWS CLI
+
+```
+Invoke-WebRequest -Uri https://awscli.amazonaws.com/AWSCLIV2.msi -OutFile AWSCLIV2.msi
+```
+
+3. Rode o comando para instalaro AWS CLI
+
+```
+Start-Process msiexec.exe -Wait -ArgumentList '/I AWSCLIV2.msi /quiet'
+```
+
+4. Rode o comando em um novo terminal para verificar se a AWS CLI foi instalada corretamente
+
+```
+aws --version
+```
+
 ## Imagens do Processo Passo a Passo
 
 ### Instalando Terraform CLI
 
 ![alt text](assets/terraform-cli.png)
 ![alt text](assets/running-terraform-cli.png)
+
+### Instalando AWS CLI
+
+![alt text](assets/aws-cli.png)
+![alt text](assets/running-aws-cli.png)
