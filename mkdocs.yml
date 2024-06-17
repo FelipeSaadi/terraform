@@ -2,5 +2,5 @@ site_name: "Documentação do Meu Terraform"
 theme:
   name: "material"
 nav:
-  - Passo a Passo: guide.md
+  - Passo a Passo: index.md
   - Screenshots: screenshots.md
