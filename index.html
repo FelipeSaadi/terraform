@@ -10,7 +10,7 @@
       
       
       
-        <link rel="next" href="about/">
+        <link rel="next" href="screenshots/">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#index" class="md-skip">
+        <a href="#processo-passo-a-passo" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Passo a Passo
             
           </span>
         </div>
@@ -198,15 +198,90 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Passo a Passo
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Home
+    Passo a Passo
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalando-o-terraform-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalando o Terraform CLI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalando-aws-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalando AWS CLI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurando-a-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurando a AWS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criando-a-ec2-com-terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criando a EC2 com Terraform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removendo-as-infras-criadas-extra" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removendo as infras criadas (Extra)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -219,11 +294,11 @@
   
   
     <li class="md-nav__item">
-      <a href="about/" class="md-nav__link">
+      <a href="screenshots/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Sobre
+    Screenshots
   </span>
   
 
@@ -252,6 +327,59 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalando-o-terraform-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalando o Terraform CLI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalando-aws-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalando AWS CLI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurando-a-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurando a AWS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criando-a-ec2-com-terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criando a EC2 com Terraform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removendo-as-infras-criadas-extra" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removendo as infras criadas (Extra)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -265,7 +393,143 @@
                   
 
 
-<h1 id="index">Index</h1>
+<h1 id="processo-passo-a-passo">Processo Passo a Passo</h1>
+<h2 id="instalando-o-terraform-cli">Instalando o Terraform CLI</h2>
+<ol>
+<li>
+<p>Abra o powershell como admin</p>
+</li>
+<li>
+<p>Navegue até uma pasta de sua escolha</p>
+</li>
+<li>
+<p>Rode o comando para baixar o zip do terraform</p>
+</li>
+</ol>
+<pre><code>Invoke-WebRequest -Uri https://releases.hashicorp.com/terraform/1.0.11/terraform_1.0.11_windows_amd64.zip -OutFile terraform.zip
+</code></pre>
+<ol>
+<li>Rode o comando para descompactar o arquivo zip</li>
+</ol>
+<pre><code>Expand-Archive -Path terraform.zip -DestinationPath C:\terraform
+</code></pre>
+<ol>
+<li>Rode o comando para salvar o terraform no path do sistema</li>
+</ol>
+<pre><code>[System.Environment]::SetEnvironmentVariable('PATH', $env:PATH + ';C:\terraform', [System.EnvironmentVariableTarget]::Machine)
+</code></pre>
+<ol>
+<li>Rode o comando em um novo terminal para verificar se o terraform CLI foi instalado corretamente</li>
+</ol>
+<pre><code>terraform -v
+</code></pre>
+<ol>
+<li>Remova o arquivo .zip baixado na etapa 3 (Opcional)</li>
+</ol>
+<h2 id="instalando-aws-cli">Instalando AWS CLI</h2>
+<ol>
+<li>
+<p>Abra o powershell como admin</p>
+</li>
+<li>
+<p>Rode o comando para baixar o instalador do AWS CLI</p>
+</li>
+</ol>
+<pre><code>Invoke-WebRequest -Uri https://awscli.amazonaws.com/AWSCLIV2.msi -OutFile AWSCLIV2.msi
+</code></pre>
+<ol>
+<li>Rode o comando para instalaro AWS CLI</li>
+</ol>
+<pre><code>Start-Process msiexec.exe -Wait -ArgumentList '/I AWSCLIV2.msi /quiet'
+</code></pre>
+<ol>
+<li>Rode o comando em um novo terminal para verificar se a AWS CLI foi instalada corretamente</li>
+</ol>
+<pre><code>aws --version
+</code></pre>
+<h2 id="configurando-a-aws">Configurando a AWS</h2>
+<ol>
+<li>Abra a AWS Academy no navegador</li>
+</ol>
+<pre><code>https://awsacademy.instructure.com/
+</code></pre>
+<ol>
+<li>Abra o learn lab, em:</li>
+</ol>
+<pre><code>Curso &gt; Módulos &gt; Iniciar os laboratórios de aprendizagem da AWS Academy
+</code></pre>
+<ol>
+<li>
+<p>Clique em start lab no canto superior</p>
+</li>
+<li>
+<p>Abra o AWS Details e marque para mostrar o AWS CLI</p>
+</li>
+<li>
+<p>Rode o comando para configurar as credenciais da aws</p>
+</li>
+</ol>
+<pre><code>aws configure
+</code></pre>
+<ol>
+<li>Preencha cada uma das infos solicitadas pela etapa anterior com as credenciais do AWS Academy que são obtidas na AWS CLI details</li>
+</ol>
+<pre><code>AWS Access Key ID [None]: 'aws_access_key_id'
+AWS Secret Access Key [None]: 'aws_secret_access_key'
+Default region name [None]: 'Region'
+Default output format [None]: 'json'
+</code></pre>
+<ol>
+<li>Rode os seguintes comandos para abrir as credenciais recem armazenadas</li>
+</ol>
+<pre><code>cd ~\.aws\
+notepad credentials
+</code></pre>
+<ol>
+<li>Adicione uma nova linha com o token de sessão da AWS CLI details</li>
+</ol>
+<pre><code>aws_session_token = 'aws_session_token'
+</code></pre>
+<p>PS: A região é mostrada no final da página de detalhes da AWS, normalmente é us-east-1</p>
+<h2 id="criando-a-ec2-com-terraform">Criando a EC2 com Terraform</h2>
+<ol>
+<li>Na pasta desejada do projeto, crie um arquivo main.tf e insira nele o seguinte código</li>
+</ol>
+<pre><code>provider &quot;aws&quot; {
+  region = &quot;us-east-1&quot;
+}
+
+resource &quot;aws_instance&quot; &quot;example&quot; {
+  ami           = &quot;ami-0c02fb55956c7d316&quot;  # Amazon Linux 2 AMI (HVM), SSD Volume Type
+  instance_type = &quot;t2.micro&quot;
+
+  tags = {
+    Name = &quot;TerraformExample&quot;
+  }
+}
+</code></pre>
+<p>PS: se sua região for diferente da apresentada, altere-a no código acima</p>
+<ol>
+<li>Rode o comando para preparar o Terraform</li>
+</ol>
+<pre><code>terraform init
+</code></pre>
+<ol>
+<li>Rode o comando para definir o que será executado pelo Terraform, será necessário confirmar com "yes"</li>
+</ol>
+<pre><code>terraform plan
+</code></pre>
+<ol>
+<li>Rode o comando para aplicar a execução que foi planejada, será necessário confirmar com "yes"</li>
+</ol>
+<pre><code>terraform apply
+</code></pre>
+<h2 id="removendo-as-infras-criadas-extra">Removendo as infras criadas (Extra)</h2>
+<ol>
+<li>Rode o comando para destruir o que foi criado, será necessário confirmar com "yes"</li>
+</ol>
+<pre><code>terraform destroy
+</code></pre>
 
 
 
