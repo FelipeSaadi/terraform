@@ -149,4 +149,4 @@ terraform apply
 terraform destroy
 ```
 
-Veja a página <a href="/screenshots">Screenshots</a> para acompanhar as imagens das execuções
+Veja a página <a href="screenshots">Screenshots</a> para acompanhar as imagens das execuções
