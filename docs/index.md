@@ -56,6 +56,36 @@ Start-Process msiexec.exe -Wait -ArgumentList '/I AWSCLIV2.msi /quiet'
 aws --version
 ```
 
+### Configurando a AWS
+
+1. Abra a AWS Academy no navegador
+
+```
+https://awsacademy.instructure.com/
+```
+
+2. Abra o learn lab, em:
+
+```
+Curso > Módulos > Iniciar os laboratórios de aprendizagem da AWS Academy
+```
+
+3. Clique em start lab no canto superior
+
+4. Abra o AWS Details e marque para mostrar o AWS CLI
+
+5. Rode o comando para configurar as credenciais da aws
+
+```
+aws configure
+```
+
+6. Preencha cada uma das infos solicitadas pela etapa anterior com as credenciais do AWS Academy
+
+```
+
+```
+
 ## Imagens do Processo Passo a Passo
 
 ### Instalando Terraform CLI
@@ -67,3 +97,9 @@ aws --version
 
 ![alt text](assets/aws-cli.png)
 ![alt text](assets/running-aws-cli.png)
+
+### Configurando a AWS
+
+![alt text](assets/learning-lab.png)
+![alt text](assets/credentials.png)
+![alt text](assets/aws-configure.png)
