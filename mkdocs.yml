@@ -1,4 +1,4 @@
-site_name: "Documentação do Meu Terraform"
+site_name: "Documentação do Terraform"
 theme:
   name: "material"
 nav:
