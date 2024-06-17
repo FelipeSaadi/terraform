@@ -1,6 +1,8 @@
 # Criação EC2 com Terraform
 
-## Instalando o Terraform CLI
+## Processo Passo a Passo
+
+### Instalando o Terraform CLI
 
 1. Abra o powershell como admin
 
@@ -24,4 +26,19 @@ Expand-Archive -Path terraform.zip -DestinationPath C:\terraform
 [System.Environment]::SetEnvironmentVariable('PATH', $env:PATH + ';C:\terraform', [System.EnvironmentVariableTarget]::Machine)
 ```
 
-6. Remova o arquivo .zip baixado na etapa 3 (Opcional)
+6. Verificar se o terraform CLI foi instalado corretamente
+
+```
+terraform -v
+```
+
+7. Remova o arquivo .zip baixado na etapa 3 (Opcional)
+
+### Instalando AWS CLI
+
+## Imagens do Processo Passo a Passo
+
+### Instalando Terraform CLI
+
+![alt text](assets/terraform-cli.png)
+![alt text](assets/running-terraform-cli.png)
