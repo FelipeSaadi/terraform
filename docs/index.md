@@ -100,7 +100,7 @@ notepad credentials
 aws_session_token = 'aws_session_token'
 ```
 
-PS: A região é mostrada no final da página de detalhes da AWS, normalmente é us-east-1
+##### PS: A região é mostrada no final da página de detalhes da AWS, normalmente é us-east-1
 
 ## Criando a EC2 com Terraform
 
@@ -121,7 +121,7 @@ resource "aws_instance" "example" {
 }
 ```
 
-PS: se sua região for diferente da apresentada, altere-a no código acima
+##### PS: se sua região for diferente da apresentada, altere-a no código acima
 
 ##### 2. Rode o comando para preparar o Terraform
 
